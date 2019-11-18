@@ -36,7 +36,6 @@ type blockchain interface {
 }
 
 
-//todo: the channel blockCh should be
 func StartFetchBlocks(roundFrom, roundTo uint64, peers map[string]FetcherPeer,
 	dropPeerFn peerDropFn, autoStop bool, stage protocol.SyncStage, chain blockchain, blockCh chan *types.Block) *BlockFetcher {
 
